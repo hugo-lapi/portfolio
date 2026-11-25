@@ -1,0 +1,43 @@
+body{margin:0;background:#ECECEC}
+html{scroll-behavior:smooth}
+a{color:#2A6CF6}a:hover{color:#1847B8}
+a:focus-visible{outline:3px solid #2A6CF6;outline-offset:4px}
+.deco{position:absolute}
+.mug{right:2.5%;top:290px;width:min(224px,calc(50% - 345px));transform:rotate(-5deg)}
+.idbody{position:relative;display:flex}
+.idwrap{flex:1 1 0;min-width:0}
+.idtext{padding:44px 40px 60px}
+.idphoto{float:right;height:100%;width:290px;display:flex;align-items:flex-end;shape-outside:inset(calc(100% - 270px) 0 0 0);shape-margin:14px}
+.idphoto img{display:block;width:290px;height:290px}
+.strip{position:relative;margin:30px 0 0;padding:24px 28px;border:1px solid #CFCFCF;display:grid;gap:20px}
+.strip-row{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:16px}
+.strip-row ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;align-items:center;justify-items:center;gap:16px}
+.strip-tag{justify-self:start;border:1px solid #BDBDBD;border-radius:4px;padding:1px 8px;font-size:15px}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:0.25}}
+.led-live{animation:blink 1.6s steps(1) infinite}
+@media (prefers-reduced-motion: reduce){.led-live{animation:none}html{scroll-behavior:auto}}
+@media (max-width: 960px){
+.deco{display:none !important}
+.note{position:relative !important;right:auto !important;top:auto !important;margin:56px auto 0 !important}
+.hero-stage{height:auto !important;margin-top:40px !important}
+.split{flex-direction:column !important}
+.split>div,.split>p{flex:0 0 auto !important;width:100%;min-width:0}
+.nav-links{display:none !important}
+.patch{padding:22px 18px !important}
+.idwrap{display:flex;flex-direction:column-reverse}
+.idtext{padding-bottom:20px}
+.idphoto{float:none;width:auto;height:auto;justify-content:center}
+}
+@media (max-width: 640px){
+.card{padding:28px 18px !important}
+.ports{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.idtext{padding:32px 20px 12px}
+.strip-row{grid-template-columns:1fr;justify-items:start}
+.strip-row ul{grid-template-columns:auto;justify-items:start;gap:14px}
+#parcours .split{gap:40px !important}
+#parcours ol>li{padding-left:58px !important}
+#parcours h3{font-size:clamp(26px,8vw,34px) !important;overflow-wrap:anywhere}
+#parcours h2,#competences h2,#contact h2{font-size:clamp(44px,15.5vw,72px) !important}
+}
+.lang-btn{background:#FFFFFF;color:#000000}
+.lang-btn[aria-pressed="true"]{background:#000000;color:#FFFFFF}
